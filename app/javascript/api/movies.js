@@ -1,5 +1,7 @@
 var _ = require('lodash');
 
+// I realize the API key should not be hardcoded into a client file, but this got me started and was 'good enough' for
+// showing some React code.
 var apiKey = 'a982fe2404361ddccb79877090faea0b'
 var delayTimer;
 var baseUrl = 'https://api.themoviedb.org/'
@@ -11,7 +13,6 @@ function toCamelCase(object) {
 function handleData(results) {
   return _.map(results, result => toCamelCase(result) )
 }
-
 
 async function fetchCollection(url) {
   const data = await fetch(url)
