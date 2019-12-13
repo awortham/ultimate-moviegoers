@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* This is a standard Rails app with a React front end. I am using Rails to have a route, but hitting the movie api
+directly.
+* To run this application, you will need to bundle and setup the database with `rake db:create db:migrate`.
+* Then enjoy exploring and searching for movies!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
