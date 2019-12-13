@@ -171,7 +171,7 @@ ol {
 	border: none;
 	font-size: 14px;
 	font-weight: 400;
-	min-width: 186px;
+	min-width: 10em;
 	padding: 17px 25px;
 	border-radius: 14px;
 	background: #eb2b63;
@@ -179,6 +179,7 @@ ol {
 	line-height: 1;
 	cursor: pointer;
 	text-align: center;
+  margin-right: .5em;
 }
 
 .site-btn:hover {
@@ -205,6 +206,19 @@ ol {
 }
 
 .loader {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+
+.spinner {
 	width: 40px;
 	height: 40px;
 	position: absolute;
@@ -570,6 +584,7 @@ ol {
 }
 
 .user-panel {
+  margin-bottom: 1em;
 	float: right;
 	background: #eb2b63;
 	color: #fff;
@@ -1458,6 +1473,12 @@ ol {
 .map {
 	margin-top: 107px;
 	height: 685px;
+}
+
+.has-search {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-right: 1em;
 }
 
 /* ----------------
