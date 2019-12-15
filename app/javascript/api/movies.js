@@ -1,8 +1,5 @@
 var _ = require('lodash');
 
-// I realize the API key should not be hardcoded into a client file, but this got me started and was 'good enough' for
-// showing some React code.
-var apiKey = 'a982fe2404361ddccb79877090faea0b'
 var delayTimer;
 var baseUrl = 'https://api.themoviedb.org/'
 
@@ -23,7 +20,7 @@ async function fetchCollection(url) {
 }
 
 export async function getMovie(id) {
-  const data = await fetch(`${baseUrl}3/movie/${id}?api_key=${apiKey}`)
+  const data = await fetch(`${baseUrl}3/movie/${id}?api_key=${movieApiKey}`)
   const movieData = await data.json()
   const cleanData = await toCamelCase(movieData)
 
@@ -31,21 +28,21 @@ export async function getMovie(id) {
 }
 
 export function searchMovies(term) {
-  const url = `${baseUrl}3/search/movie?api_key=${apiKey}&query=${term}&region=us`
+  const url = `${baseUrl}3/search/movie?api_key=${movieApiKey}&query=${term}&region=us`
   return fetchCollection(url)
 }
 
 export function nowPlaying() {
-  const url = `${baseUrl}3/movie/now_playing?api_key=${apiKey}&region=US`
+  const url = `${baseUrl}3/movie/now_playing?api_key=${movieApiKey}&region=US`
   return fetchCollection(url)
 }
 
 export function popular() {
-  const url = `${baseUrl}3/discover/movie?api_key=${apiKey}&region=US&sort_by=popularity.desc`
+  const url = `${baseUrl}3/discover/movie?api_key=${movieApiKey}&region=US&sort_by=popularity.desc`
   return fetchCollection(url)
 }
 
 export function highestRated() {
-  const url = `${baseUrl}3/discover/movie?api_key=${apiKey}&region=US&sort_by=vote_count.desc`
+  const url = `${baseUrl}3/discover/movie?api_key=${movieApiKey}&region=US&sort_by=vote_count.desc`
   return fetchCollection(url)
 }
